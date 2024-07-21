@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Manipulation</title>
+    <style>
+        .sub-heading{
+            color: red;
+            font-size: 30px;
+            font-weight: 800;
+            border:  2px solid black;
+        }
+        #main-heading{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <h1 id="main-heading">DOM-Javascript</h1>
+    <button class="primary-btn" style="background-color: darksalmon;">Login</button>
+    </main>
+    <ul>
+        <li>Home</li>
+        <li>Contact us</li>
+    </ul>
+    <img src="https://images.unsplash.com/photo-1721475246144-98e4f01f3a6c?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="height: 50%; width: 50%;" alt="unsplash-img">
+    <h2>Sub-Heading</h2>
+    <section>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est quis rerum similique aut, earum, voluptas id neque delectus sunt officiis iste.</p>
+        <button class="sec-btn">Change Text</button>
+    </section>
+</body>
+<script>
+    // a1:t1
+    const mainHeading = document.getElementById("main-heading");
+    // changing text content
+    mainHeading.textContent = "DOM - Manipulation";
+
+    // a1:t2
+    // selecting first element of having class `primary-btn`
+    const primaryBtn = document.getElementsByClassName("primary-btn")[0];
+    primaryBtn.style.backgroundColor = "#83f28f";
+
+    // a2:t3
+    const div = document.createElement("div");
+    const textNode = document.createTextNode("Creating and Appending Elements");
+    // appending text node to the div
+    div.appendChild(textNode);
+    // appending div to body
+    document.body.appendChild(div);
+
+    // a2:t4
+    // creating new <li> element
+    const li = document.createElement("li");
+    li.textContent = "About us";
+    // appending to ul
+    document.querySelector("ul").appendChild(li);
+
+    // a3:t5
+    // removing existing div element
+    div.remove();
+
+    // a3:t6
+    // removing last child element of main
+    document.querySelector("main").lastElementChild.remove();
+
+    // a4:t7
+    const image = document.querySelector("img");
+    image.setAttribute("src", "https://images.unsplash.com/photo-1720986073399-f5c24e020ca1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D");
+
+    // a4:t8
+    // adding a class
+    document.querySelector("h2").classList.add("sub-heading");
+    // removing class
+    document.querySelector("h2").classList.remove("sub-heading");
+
+    // a5:t9
+    const secBtn = document.querySelector(".sec-btn");
+    const paragraph = document.querySelector("p");
+
+    secBtn.addEventListener("click", () => {
+        paragraph.textContent = "Paragraph text change using javascript."
+    });
+
+    // a5:t10
+    // Adding mouse event to the main heading
+    function onMouseOver(){
+        mainHeading.style.border = "2px solid black";
+    }
+
+    function onMouseOut(){
+        mainHeading.style.border = "2px solid red";
+    }
+
+    mainHeading.addEventListener("mouseover", onMouseOver);
+
+    mainHeading.addEventListener("mouseleave", onMouseOut);
+
+</script>
+</html>
