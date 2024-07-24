@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+        body{
+            background-color: #2d2d2d;
+            color: white;
+        }
+        
+        img{
+            height: 300px;
+            width: 300px;
+            margin: 20px;
+        }
+
+        .hidden{
+            opacity: 0;
+        }
+
+        .visible{
+            opacity: 100;
+        }
+
+        input{
+            margin: 20px;
+            width: 34rem;
+            padding: 3px;
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <p id="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione explicabo mollitia quidem, enim laborum error.</p>
+        <button id="txt-btn">Change Text</button>
+        <div>
+                <img class="visible" src="https://images.unsplash.com/photo-1717137389747-d1d4ced6abc8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8" alt="image">
+        </div>
+    </section>
+    <div id="change-bg">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam aperiam mollitia nemo totam reprehenderit accusamus consectetur inventore perspiciatis.
+    </div>
+    <div>
+        <input id="key-input" placeholder="Enter some text" type="text">
+        <p id="input-value"></p>
+    </div>
+
+     <form id="basicForm">
+       
+        <label for="emailInput">Email:</label>
+        <input type="email" id="emailInput" name="email" placeholder="Enter your email">
+
+        <label for="passwordInput">Password:</label>
+        <input type="password" id="passwordInput" name="password" placeholder="Enter your password">
+
+        <label for="cars">Choose a car:</label>
+
+        <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+        </select>
+
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <h3>Selected Option: </h3>
+            <p id="selected-para">volvo</p>
+        </div>
+
+        <button type="submit" id="submitButton">Submit</button>
+    </form>
+
+    <ul>
+        <li>Home</li>
+        <li>About us</li>
+        <li>Contact us</li>
+    </ul>
+
+    <h3>Our Courses</h3>
+    <ol type="1">
+        <li>Master JS</li>
+        <li>Master DBMS</li>
+    </ol>
+
+
+    <!-- scripts file -->
+    <script src="./click.js"></script>
+    <script src="./mouse.js"></script>
+    <script src="./keyboard.js"></script>
+    <script src="./form.js"></script>
+    <script src="./eventDelegation.js"></script>
+</body>
+</html>
