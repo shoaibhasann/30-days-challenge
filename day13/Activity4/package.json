@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+    "task6": "node ./task6.js",
+    "task7": "node ./task7.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "lodash": "^4.17.21"
+  }
+}
