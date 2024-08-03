@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity - 1</title>
+    <style>
+        body{
+            background-color: #202020;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">LocalStorage & SessionStorage</h1>
+    <script>
+        // t1
+        // setting value in local storage
+        localStorage.setItem("Name", "Shoaib");
+        // getting value from local storage
+        const name = localStorage.getItem("Name");
+        console.log(name); // Output: Shoaib
+
+        // t2
+        const user = {
+            username: "shoaib.hasann",
+            password: "password"
+        }
+
+        // setting object as JSON string in local storage
+        localStorage.setItem("user", JSON.stringify(user));
+
+        // retreiving and parsing object
+        const getObj = JSON.parse(localStorage.getItem("user"));
+        console.log(getObj);
+
+
+    </script>
+</body>
+</html>

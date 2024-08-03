@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SessionStorage</title>
+</head>
+<body>
+    <h1>Session Storage</h1>
+    <script>
+        // setting string data in session storage
+        sessionStorage.setItem("isLoggedIn", "true");
+
+        // retrieving data from session storage
+        const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+        console.log(isLoggedIn);
+
+        // settting object in session storage
+        const formData = {
+            name: "Shoaib",
+            email: "shoaib@gmail.com",
+            password: "encrypted"
+        }
+
+        sessionStorage.setItem("formData", JSON.stringify(formData));
+
+        // logging object
+        console.log(JSON.parse(sessionStorage.getItem("formData")));
+    </script>
+</body>
+</html>

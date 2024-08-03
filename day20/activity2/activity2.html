@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task - 3</title>
+    <style>
+      /* Basic styling for the form */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      input[type="text"],
+      input[type="email"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .saved-data {
+        max-width: 400px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="saved-data" id="savedData">
+      <!-- This section will display saved data -->
+    </div>
+    <form id="simpleForm">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your name.."
+        required
+      />
+
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Your email.."
+        required
+      />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- script file -->
+    <script>
+      const form = document.getElementById("simpleForm");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // get the form data
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+
+        // setting form data into local storage
+        localStorage.setItem("formData", JSON.stringify({name: name.value, email: email.value}));
+
+        // clear form data
+        name.value = "";
+        email.value = "";
+
+        displaySavedData();
+      });
+
+      function displaySavedData(){
+        const savedData = JSON.parse(localStorage.getItem("formData"));
+        const savedDiv = document.getElementById("savedData");
+
+        if(savedData){
+            savedDiv.innerHTML =  `<h3>Saved Data:</h3>
+                                <p><strong>Name:</strong> ${savedData.name}</p>
+                                <p><strong>Email:</strong> ${savedData.email}</p>`;
+    
+        } else {
+            savedDiv.innerHTML = `<h3>No saved data</h3>`;
+        }
+      }
+
+      // display saved data on page load
+      document.addEventListener("DOMContentLoaded", displaySavedData);
+    </script>
+  </body>
+</html>
