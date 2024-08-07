@@ -1,4 +1,4 @@
-const apiKey = "28dddab8";
+const apiKey = "Your_OMDB_API_Key";
 const searchInput = document.getElementById("searchInput");
 const submit = document.getElementById("searchButton");
 const moviesContainer = document.getElementById("movies");
