@@ -4,8 +4,8 @@ import {
   autoCompleteSearch,
   getHourlyForecast,
   getDailyForecast,
-} from "./api.mjs";
-import { debounce } from "./debounce.mjs";
+} from "./api.js";
+import { debounce } from "./debounce.js";
 
 async function updateWeather(cityName = "Delhi, India") {
   // find location key for city

@@ -2,6 +2,14 @@
 
 **weather.io** is a modern weather forecasting website that provides users with precise weather information for any city around the world. Built using HTML, CSS, and vanilla JavaScript, this project leverages the AccuWeather API to deliver current weather, 12-hour forecasts, and 5-day forecasts.
 
+## 🌐 Live Preview
+
+Checkout Live Preview by clicking the image below:
+
+[![LivePreview](./public/preview.png)](https://threads-clone-two-pink.vercel.app/)
+
+
+
 ## Features
 
 - **Global Weather Lookup:** Users can check the weather for any city in the world.
@@ -11,15 +19,8 @@
 - **Search Suggestions:** Enhanced search functionality with autocomplete suggestions powered by the AccuWeather Autocomplete Search API.
 - **Responsive Design:** A visually appealing dark theme with a responsive layout ensures a great experience on both desktop and mobile devices.
 
-## Screenshots
 
-![Screenshot](./preview.png)
-
-## Live Preview
-
-Check out the live preview of the website at: [Live Preview](link-to-your-live-preview)
-
-## Technologies Used
+## 💻 Technologies Used
 
 - **HTML** - Structure of the website
 - **CSS** - Styling and design
@@ -27,24 +28,42 @@ Check out the live preview of the website at: [Live Preview](link-to-your-live-p
 - **AccuWeather API** - Source of weather data
 - **AccuWeather Autocomplete Search API** - Search suggestion functionality
 
-## Installation
+## 🔽 Installation
 
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/weather.io.git
+    git clone https://github.com/shoaibhasann/30-days-challenge.git
     ```
 
 2. **Navigate to the project directory:**
 
     ```bash
-    cd weather.io
+    cd weather-app
     ```
 
-3. **Open the `index.html` file in your browser:**
+3. **Install the dependencies:**
 
     ```bash
-    open index.html
+    npm install
+    ```
+
+4. **Create a `.env` file in the root of the project and add your API key:**
+
+    ```plaintext
+    VITE_ACCUWEATHER_API_KEY=your-actual-api-key
+    ```
+
+5. **Start the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+6. **Open your browser and navigate to the local development server
+
+    ```bash
+    open http://localhost:5173/
     ```
 
 ## Usage
@@ -54,9 +73,9 @@ Check out the live preview of the website at: [Live Preview](link-to-your-live-p
 3. **Select a city** from the suggestions to get the current weather, 12-hour forecast, and 5-day forecast.
 4. **Explore the weather details** and enjoy the responsive dark-themed UI.
 
-## API Keys
+## 🗝️ API Keys
 
-- **AccuWeather API Key:** You need a valid API key from AccuWeather to access weather data. Replace the placeholder `apiKey` in the `api.mjs` file with your actual API key.
+- **AccuWeather API Key:** You need a valid API key from AccuWeather to access weather data. Replace the placeholder `apiKey` in the `./js/api.js` file with your actual API key.
 - **Autocomplete Search API Key:** Make sure you use the correct API key for accessing the autocomplete search functionality.
 
 ## Contributing
