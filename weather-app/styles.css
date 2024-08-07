@@ -1,0 +1,329 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Space+Grotesk&display=swap');
+
+
+:root {
+  /* Primary Colors */
+  --primary-bg-color: #121212; /* Dark background */
+  --secondary-bg-color: #1f1f1f; /* Slightly lighter background for contrast */
+  --main-text-color: #fff;
+  --primary-text-color: #e0e0e0; /* Light text for readability */
+  --secondary-text-color: #b3b3b3; /* Slightly darker text for less emphasis */
+  --accent-color: #bb86fc; /* Accent color for highlights and important elements */
+
+  /* Other Colors */
+  --border-color: #333333; /* Border color */
+  --hover-bg-color: #333333; /* Hover background color */
+  --active-bg-color: #444444; /* Active background color */
+  --shadow-color: rgba(0, 0, 0, 0.5); /* Shadow color for depth */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+html {
+  font-family: "Karla", sans-serif;
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+/* layout css  */
+body {
+  background-color: #000;
+  color: var(--primary-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: var(--primary-bg-color);
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left {
+  background-color: var(--secondary-bg-color);
+  width: 35%; /* Adjust between 30-40% as needed */
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.right {
+  background-color: var(--primary-bg-color);
+  width: 55%; /* Remaining width */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* left portion of website  */
+
+.upper-left {
+  position: relative;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #34333d;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 5px 10px;
+  gap: 15px;
+}
+
+.search-suggestions {
+  background-color: #34333d;
+  border: 1px solid var(--border-color);
+  border-top: none; /* Remove border at the top to merge with the input field */
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  margin-top: 1px;
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  border-radius: 0 0 20px 20px; /* Rounded corners at the bottom */
+  overflow: hidden; /* Hide overflow to avoid spilling of rounded corners */
+  z-index: 1;
+}
+
+.search-suggestions li {
+  padding: 10px;
+  font-size: 1.4rem;
+  color: var(--primary-text-color);
+  cursor: pointer;
+}
+
+.search-suggestions li:hover {
+  background-color: var(--hover-bg-color);
+}
+
+.search-wrapper input {
+  background: none;
+  border: none;
+  color: var(--primary-text-color);
+  width: 100%;
+  padding: 5px;
+}
+
+input::placeholder {
+  color: var(--primary-text-color);
+}
+
+.search-wrapper i {
+  color: var(--accent-color);
+  font-size: 1.3rem;
+}
+
+.search-wrapper input:focus {
+  outline: none;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-card {
+  color: var(--primary-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 13px;
+}
+
+.weather-icon-container {
+  text-align: center; /* Center align the icon */
+}
+
+#weather-icon {
+  height: 100px;
+}
+
+.main-card h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.main-card h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.normal-text {
+  color: var(--secondary-text-color);
+  font-size: 14px;
+}
+
+.card-wrapper {
+  margin-top: 10px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.card {
+  background: linear-gradient(135deg, rgba(52, 51, 61, 0.8), rgba(52, 51, 61, 0.5));
+  border-radius: 10px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 95px;
+}
+
+.card h1 {
+  color: var(--primary-text-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.card strong {
+  color: var(--main-text-color);
+  font-size: 1.7rem;
+}
+
+.card p {
+  font-size: 1.2rem;
+  color: var(--secondary-text-color);
+}
+
+/* right portion of website  */
+.hourly-forecast {
+  background-color: var(--secondary-bg-color);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.hourly-forecast h1 {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  border-bottom: 1px solid var(--secondary-text-color);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+.hourly-data{
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding-bottom: 15px;
+}
+
+/* Scrollbar styling for .hourly-data */
+.hourly-data::-webkit-scrollbar {
+  height: 5px; /* Height of horizontal scrollbar */
+}
+
+.hourly-data::-webkit-scrollbar-track {
+  background: var(--primary-bg-color); /* Background of the scrollbar track */
+  border-radius: 10px;
+}
+
+.hourly-data::-webkit-scrollbar-thumb {
+  background: var(--active-bg-color); /* Color of the scrollbar thumb */
+  border-radius: 10px;
+}
+
+.hourly-data::-webkit-scrollbar-thumb:hover {
+  background: var(--active-bg-color); /* Color when hovering over the scrollbar thumb */
+}
+
+.forecast-card:first-child{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #34333d;
+  border-radius: 20px;
+  padding: 13px 20px;
+  gap: 5px;
+  cursor: pointer;
+  backdrop-filter: blur(20px);
+}
+
+.forecast-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 13px 20px;
+  gap: 5px;
+  cursor: pointer;
+  backdrop-filter: blur(20px);
+}
+
+.forecast-card:hover{
+  background-color: #34333d;
+}
+
+.forecast-card h3 {
+  font-size: 12px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.forecast-card h2 {
+  font-size: 21px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1.8px;
+}
+
+.forecast-card img {
+  height: 30px;
+}
+
+.hour{
+  max-width: 100px;
+}
+
+.daily{
+  max-width: 300px;
+}
+
+#daily-temp{
+  font-size: 16px;
+}
+
+/* media queries for smaller screens to make responsive  */
+
+@media screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    gap: 15px;
+  }
+  .left {
+    width: 100%;
+  }
+  .right{
+    width: 100%;
+  }
+}
