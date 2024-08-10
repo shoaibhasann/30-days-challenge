@@ -6,7 +6,7 @@
 
 Checkout Live Preview by clicking the image below:
 
-[![LivePreview](./public/preview.png)](https://threads-clone-two-pink.vercel.app/)
+[![LivePreview](./public/preview.png)](https://weather-io-flame.vercel.app/)
 
 
 
