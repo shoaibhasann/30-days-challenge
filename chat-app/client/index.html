@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="joinContainer">
+        <h1>Join Chat Room</h1>
+        <input id="usernameInput" type="text" placeholder="Enter your username">
+        <button id="joinBtn">Join</button>
+    </div>
+
+    <main id="chatContainer">
+        <h1>Chat Room</h1>
+    <div class="chat-container">
+        <div class="chat-box" id="chatBox">
+            <!-- Messages will be appended here -->
+        </div>
+        <div class="message-input">
+            <input id="messageInput" type="text" placeholder="Type your message...">
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+    </main>
+
+     <!-- Audio element -->
+    <audio id="notificationSound" src="./public/facebook_messenger.mp3" preload="auto"></audio>
+
+    <!-- entry point for script file  -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
