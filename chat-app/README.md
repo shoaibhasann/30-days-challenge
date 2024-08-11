@@ -6,9 +6,9 @@ Welcome to the Chat Application! This project is a real-time chat app built usin
 
 Checkout Live Preview by clicking the image below:
 
-[![LivePreview](./client/public/ss1.png)](https://threads-clone-two-pink.vercel.app/)
+[![LivePreview](./client/public/ss1.png)](https://chat-app-fawn-psi-47.vercel.app/)
 
-[![LivePreview](./client/public/ss2.png)](https://threads-clone-two-pink.vercel.app/)
+[![LivePreview](./client/public/ss2.png)](https://chat-app-fawn-psi-47.vercel.app/)
 
 
 ## Tech Stack
