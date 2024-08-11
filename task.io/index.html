@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-Ninja</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/c478d9fbd5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div>
+            <h1>All Tasks</h1>
+            <span class="line"></span>
+        </div>
+        <section class="task-container">
+            <div class="empty" id="open-modal">
+                <h2> <i style="margin-right: 8px;" class="fa-solid fa-plus"></i>Add New Task</h2>
+            </div>
+            <!-- <div class="task-card">
+                <h2 class="task-title">Watch a video from fireship</h2>
+                <p class="task-description">Enroll to that weird javascript course by Fireship.io Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos sed eos voluptas tenetur deleniti itaque! Reiciendis odio repellat cupiditate eum, consequuntur neque mollitia.</p>
+                <p class="task-date">10/11/2023</p>
+                <div class="task-interaction">
+                    <button>Completed</button>
+                    <div class="task-icon">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+            </div> -->
+        </section>
+    </main>
+
+    <!-- Modal to create new task -->
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2 id="modal-heading">Add New Task</h2>
+            <form id="task-form">
+                <label for="new-task-title">Task Title:</label>
+                <input type="text" id="new-task-title" name="new-task-title" required>
+                
+                <label for="new-task-description">Task Description:</label>
+                <textarea id="new-task-description" name="new-task-description" required></textarea>
+                
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal to edit task -->
+    <div id="edit-task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="edit-close-modal">&times;</span>
+            <h2 id="modal-heading">Edit Task</h2>
+            <form id="edit-task-form">
+                <label for="edit-task-title">Task Title:</label>
+                <input type="text" id="edit-task-title" name="edit-task-title" required>
+                
+                <label for="edit-task-description">Task Description:</label>
+                <textarea id="edit-task-description" name="edit-task-description" required></textarea>
+                
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
