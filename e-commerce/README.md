@@ -1,17 +1,19 @@
-# Shoppie Ecommerce Website
+# [Shoppie Ecommerce Website](https://30-days-challenge-xi.vercel.app/)
 
 Shoppie is designed as a Single Page Application (SPA), ensuring a smooth and seamless user experience. The website dynamically renders pages using JavaScript, meaning that when users navigate between different sections—such as the product listings, cart, checkout, and order confirmation—only the relevant content is updated without reloading the entire page. This approach provides faster interactions and a more fluid experience, making the website feel more responsive and intuitive. Each page transition is handled efficiently, ensuring that users can shop, review their cart, and complete their purchase with minimal interruption.
 
 ## 📸 App Screenshots
 
+click on image to get live preview 🌐
+
 ### Home Page
-![Shoppie Cart](./public/ss2.png)
+![Shoppie Cart](./public/ss2.png)(https://30-days-challenge-xi.vercel.app/)
 
 ### Products Section
-![Shoppie Home](./public/ss1.png)
+![Shoppie Home](./public/ss1.png)(https://30-days-challenge-xi.vercel.app/)
 
 ### Cart Page
-![Shoppie Cart](./public/ss3.png)
+![Shoppie Cart](./public/ss3.png)(https://30-days-challenge-xi.vercel.app/)
 
 
 ## 🌟 Features
@@ -25,6 +27,8 @@ Shoppie is designed as a Single Page Application (SPA), ensuring a smooth and se
 - **Checkout Page**: Includes a form for user information and order details.
 
 - **Order Confirmation Page**: Displays a summary of the user's order after checkout.
+
+- **Cloudinary**: To store products images.
 
 ## 📂 Project Structure
 
