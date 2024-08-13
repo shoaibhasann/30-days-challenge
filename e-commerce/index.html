@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Shoppie - Ecommerce</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <script
+      src="https://kit.fontawesome.com/c478d9fbd5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- header  -->
+    <header>
+      <div class="logo">
+        <img src="./public/logo.svg" alt="Shoppie Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li id="home">Home</li>
+          <li id="products">Products</li>
+          <li id="cart">Cart(0)</li>
+        </ul>
+      </nav>
+    </header>
+
+  <main id="landing">
+      <!-- hero section  -->
+    <section class="hero">
+      <div class="image-wrapper1">
+        <img class="banner1" src="./public/model1.png" alt="hero banner 1" />
+        <div class="left-hero">
+          <h2>MEN</h2>
+          <h3>JACKETS</h3>
+          <button type="button" class="see-btn">
+            See product <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="image-wrapper2">
+        <img class="banner2" src="./public/model2.png" alt="hero banner 2" />
+        <div class="right-hero">
+          <h2>MAN</h2>
+          <h3>HOODIE</h3>
+          <button type="button" class="see-btn">
+            See product <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals section  -->
+    <section class="new-arrivals">
+      <h1>New Arrivals Picked 4U</h1>
+      <div id="product-container"></div>
+    </section>
+  </main>
+
+    <!-- shopping cart section  -->
+    <section id="shopping-cart-section" style="display: none">
+      <h2>Shopping Bag</h2>
+      <h3><strong id="shopping-items">2 items</strong> in your bag.</h3>
+      <div class="cart-container"></div>
+    </section>
+
+    <!-- checkout section  -->
+  <div class="checkout-container" style="display: none;">
+     <h2>Checkout</h2>
+    <form id="checkout-form">
+        <div class="billing-details">
+            <h3>Billing Details</h3>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" required>
+            </div>
+            <div class="form-group">
+                <label for="zip">ZIP Code</label>
+                <input type="text" id="zip" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" required>
+            </div>
+        </div>
+
+        <div class="payment-details">
+            <h3>Payment Details</h3>
+            <div class="form-group">
+                <label for="card-name">Name on Card</label>
+                <input type="text" id="card-name" required>
+            </div>
+            <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" required>
+            </div>
+            <div class="form-group">
+                <label for="expiry-date">Expiry Date</label>
+                <input type="text" id="expiry-date" placeholder="MM/YY" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" required>
+            </div>
+        </div>
+
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <p>Subtotal: <span id="sub-total">₹1000</span></p>
+            <p>Shipping: <span id="shipping">Rs.100</span></p>
+            <p>Discount: <span id="discount">-₹100</span></p>
+            <p><strong>Total: <span id="total">₹1000</span></strong></p>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="checkout-btn">Place Order</button>
+        </div>
+    </form>
+     </div>
+
+     <!-- order placed card  -->
+    <div class="confirmation-card" style="display: none;">
+      <div class="order-card">
+      <div class="confirm">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3>Order validated</h3>
+      <p>Thank you for you purchase. your package will be delivered within 2 days of your purchase.</p>
+      <button id="go-shop">Go Shop</button>
+    </div>
+    </div>
+
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
