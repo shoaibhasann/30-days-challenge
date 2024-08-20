@@ -1,4 +1,4 @@
-# [Instagram Clone](https://30-days-challenge-xi.vercel.app/)
+# [Instagram Clone](https://instagram-clone-sage-tau.vercel.app/)
 
 This project is a social media application inspired by Instagram, created using pure Vanilla JavaScript, HTML, and CSS. It mimics several key features of Instagram, including user authentication, post management, real-time notifications, and a UI inspired by Instagram's dark theme. The application is a Single Page Application (SPA) that dynamically renders content, providing a seamless and responsive experience across all device sizes.
 
@@ -7,10 +7,10 @@ This project is a social media application inspired by Instagram, created using 
 click on image to get live preview 🌐
 
 ### Home Page
-[![Social-Feed](./public/ss1.png)](https://30-days-challenge-xi.vercel.app/)
+[![Social-Feed](./public/ss1.png)](https://instagram-clone-sage-tau.vercel.app/)
 
 
-[![Notification](./public/ss2.png)](https://30-days-challenge-xi.vercel.app/)
+[![Notification](./public/ss2.png)](https://instagram-clone-sage-tau.vercel.app/)
 
 
 ## 🌟 Features
