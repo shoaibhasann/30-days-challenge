@@ -1,4 +1,4 @@
-import { closeModal, getData, getFirstChar, showModal } from "./utils";
+import { closeModal, getData, getFirstChar, showModal } from "./utils.js";
 
 export const openCommentModal = (index) => {
   const commentModal = document.getElementById("comment-modal");

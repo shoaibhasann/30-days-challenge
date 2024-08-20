@@ -33,7 +33,7 @@ export const getFirstChar = (username) => {
   return username.trim().charAt(0);
 };
 
-export const compressImage = (file, maxSize = 500, quality = 0.7) => {
+export const compressImage = (file, maxSize = 500, quality = 1) => {
   if (!file) {
     console.error("File not provided");
     return null;
@@ -70,7 +70,7 @@ export const compressImage = (file, maxSize = 500, quality = 0.7) => {
         canvas.height = height;
 
         // Draw image on to canvas
-        context.drawImage(img, 0, 0, maxSize, maxSize);
+        context.drawImage(img, 0, 0, width, height);
 
         // convert image into baseURL 64
         const resizedImage = canvas.toDataURL("image/jpeg", quality);
